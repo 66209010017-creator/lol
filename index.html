@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-Eleven Green Life | ลดขยะ เพื่อสิ่งแวดล้อมที่ยั่งยืน</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">7‑Eleven ทุกสาขา • ทุกวัน • ทุกคนช่วยได้</span>
+    <h1>ลดขยะทีละชิ้น<br>เริ่มจากร้านสะดวกซื้อใกล้บ้านคุณ</h1>
+    <p class="lede">ทุกวันร้าน 7‑Eleven หลายพันสาขาให้บริการลูกค้านับล้านคน และในทุกการซื้อขาย ก็มีขยะเกิดขึ้นตามมา — ถุงพลาสติก แก้ว กล่องอาหาร บรรจุภัณฑ์ เว็บไซต์นี้ชวนคุณสำรวจว่าขยะเหล่านั้นมาจากไหน ส่งผลอย่างไร และเราทุกคนช่วยลดมันได้อย่างไรบ้าง</p>
+    <div class="mt" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="problem.html" class="btn btn-primary">เริ่มเรียนรู้ →</a>
+      <a href="quiz.html" class="btn btn-outline light">ลองทำ Green Quiz</a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">เกริ่นนำ</span><div class="line"></div></div>
+      <h2>ปัญหาขยะที่มองข้ามไม่ได้</h2>
+      <p>ร้านสะดวกซื้อคือส่วนหนึ่งของชีวิตประจำวันคนไทย แต่ความสะดวกนั้นมาพร้อมบรรจุภัณฑ์แบบใช้ครั้งเดียวทิ้งจำนวนมหาศาล ตั้งแต่ถุงพลาสติกใส่สินค้า แก้วเครื่องดื่ม ไปจนถึงกล่องอาหารพร้อมทาน ขยะเหล่านี้ส่วนใหญ่ถูกใช้งานเพียงไม่กี่นาทีก่อนถูกทิ้ง แต่ใช้เวลาย่อยสลายนานนับร้อยปี</p>
+      <div class="grid cols-3 mt">
+        <div class="stat"><span class="num">450+</span><span class="label">ปี ที่พลาสติกบางชนิดใช้ย่อยสลายในธรรมชาติ</span></div>
+        <div class="stat"><span class="num">1 ใบ</span><span class="label">ถุงพลาสติก ใช้งานเฉลี่ยเพียงไม่ถึง 25 นาที</span></div>
+        <div class="stat"><span class="num">3 ประเภท</span><span class="label">ขยะหลักจากร้านสะดวกซื้อ: ทั่วไป รีไซเคิล อินทรีย์</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ทำไมสำคัญ</span><div class="line"></div></div>
+      <h2>ทำไมการลดขยะจึงสำคัญ</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="icon">🌊</span>
+          <h3>ปกป้องแหล่งน้ำและทะเล</h3>
+          <p>ขยะพลาสติกที่จัดการไม่ถูกวิธีไหลลงคูคลองและแม่น้ำ สุดท้ายไปสะสมอยู่ในทะเล กระทบสัตว์น้ำและระบบนิเวศ</p>
+        </div>
+        <div class="card">
+          <span class="icon">🌱</span>
+          <h3>รักษาความอุดมสมบูรณ์ของดิน</h3>
+          <p>ขยะที่ฝังกลบปล่อยสารเคมีปนเปื้อนดิน ลดความสามารถในการเพาะปลูกของพื้นที่โดยรอบในระยะยาว</p>
+        </div>
+        <div class="card">
+          <span class="icon">♻️</span>
+          <h3>ลดการใช้ทรัพยากรใหม่</h3>
+          <p>การลดและรีไซเคิลขยะช่วยลดความต้องการวัตถุดิบใหม่ ประหยัดพลังงานในกระบวนการผลิต</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">เป้าหมาย</span><div class="line"></div></div>
+      <h2>เป้าหมายด้านสิ่งแวดล้อมของโครงการนี้</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>🎯 ลดถุงพลาสติกแบบใช้ครั้งเดียว</h3>
+          <p>ส่งเสริมให้ลูกค้าปฏิเสธถุงพลาสติกเมื่อไม่จำเป็น และหันมาใช้ถุงผ้าหรือภาชนะส่วนตัว</p>
+        </div>
+        <div class="card">
+          <h3>🎯 เพิ่มอัตราการคัดแยกขยะ</h3>
+          <p>ให้ความรู้เรื่องการแยกขยะทั่วไป รีไซเคิล และอินทรีย์ ตั้งแต่ต้นทางก่อนทิ้ง</p>
+        </div>
+        <div class="card">
+          <h3>🎯 พัฒนาบรรจุภัณฑ์รักษ์โลก</h3>
+          <p>ผลักดันการใช้วัสดุที่ย่อยสลายได้หรือรีไซเคิลได้แทนพลาสติกแบบเดิม</p>
+        </div>
+        <div class="card">
+          <h3>🎯 ประหยัดพลังงานในร้าน</h3>
+          <p>ลดการใช้ไฟฟ้าและทรัพยากรภายในร้านค้าด้วยเทคโนโลยีและอุปกรณ์ประหยัดพลังงาน</p>
+        </div>
+      </div>
+      <div class="center mt">
+        <a href="problem.html" class="btn btn-primary">เริ่มเรียนรู้ →</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

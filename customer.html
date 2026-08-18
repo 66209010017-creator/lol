@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ลูกค้าช่วยลดขยะได้อย่างไร | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 07 · ตัวคุณเองก็ช่วยได้</span>
+    <h1>ลูกค้าช่วยลดขยะได้อย่างไร</h1>
+    <p class="lede">ทำเช็กลิสต์นี้ทุกครั้งที่แวะร้าน แล้วสะสม Green Point ของคุณเอง</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">07 ลงมือทำ</span><div class="line"></div></div>
+      <h2>ลูกค้าช่วยลดขยะได้อย่างไร</h2>
+      <p>การลดขยะไม่ใช่หน้าที่ของร้านค้าเพียงฝ่ายเดียว ลูกค้าทุกคนมีส่วนช่วยได้ในทุกครั้งที่แวะซื้อของ ลองทำเช็กลิสต์ด้านล่างนี้ทุกครั้งที่ไปร้านสะดวกซื้อ แล้วดูว่าวันนี้คุณทำได้กี่ข้อ</p>
+    </section>
+
+    <section>
+      <h2>Checklist ประจำวัน</h2>
+      <form class="checklist" id="checklistForm">
+        <label><input type="checkbox" data-pts="10"><span>วันนี้ไม่รับถุงพลาสติก</span><span class="pts">+10</span></label>
+        <label><input type="checkbox" data-pts="8"><span>ใช้ถุงผ้าหรือกระเป๋าส่วนตัว</span><span class="pts">+8</span></label>
+        <label><input type="checkbox" data-pts="10"><span>แยกขยะก่อนทิ้ง</span><span class="pts">+10</span></label>
+        <label><input type="checkbox" data-pts="8"><span>นำแก้ว/ภาชนะกลับมาใช้ซ้ำ</span><span class="pts">+8</span></label>
+        <label><input type="checkbox" data-pts="6"><span>เลือกสินค้าที่มีบรรจุภัณฑ์เหมาะสม</span><span class="pts">+6</span></label>
+      </form>
+
+      <div class="result-box mt">
+        <div class="small">คะแนนวันนี้</div>
+        <div class="big" id="todayScore">0</div>
+        <div class="small" id="todayLabel">ลองติ๊กเช็กลิสต์ด้านบนดูสิ</div>
+        <button class="btn btn-primary mt" id="saveChecklist">บันทึกคะแนนวันนี้</button>
+        <p class="feedback" id="checklistFeedback"></p>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="calculator.html" class="btn btn-primary">ไปต่อ: เครื่องคำนวณขยะ →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const boxes = document.querySelectorAll('#checklistForm input[type=checkbox]');
+  const scoreEl = document.getElementById('todayScore');
+  const labelEl = document.getElementById('todayLabel');
+  const fb = document.getElementById('checklistFeedback');
+
+  function labelFor(score, max){
+    if(score === 0) return 'ลองติ๊กเช็กลิสต์ด้านบนดูสิ';
+    if(score === max) return 'สุดยอด! คุณคือ Green Hero ประจำวันนี้ 🌳';
+    if(score >= max*0.6) return 'ทำได้ดีมาก อีกนิดเดียวจะครบทุกข้อ';
+    return 'เริ่มต้นดีแล้ว ลองทำเพิ่มอีกสักข้อ';
+  }
+
+  function recalc(){
+    let score = 0, max = 0;
+    boxes.forEach(b=>{ max += parseInt(b.dataset.pts,10); if(b.checked) score += parseInt(b.dataset.pts,10); });
+    scoreEl.textContent = score;
+    labelEl.textContent = labelFor(score, max);
+    return score;
+  }
+  boxes.forEach(b => b.addEventListener('change', recalc));
+  recalc();
+
+  document.getElementById('saveChecklist').addEventListener('click', ()=>{
+    const score = recalc();
+    if(score === 0){
+      fb.className='feedback no';
+      fb.textContent = 'ติ๊กอย่างน้อย 1 ข้อก่อนบันทึกนะ';
+      return;
+    }
+    if(!Auth.requireLogin(fb)) return;
+    GreenPoints.add(score);
+    fb.className='feedback ok';
+    fb.textContent = `บันทึกแล้ว! ได้รับ ${score} Green Point เพิ่มในยอดสะสมของคุณ`;
+    boxes.forEach(b=> b.checked = false);
+    recalc();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องคำนวณขยะ | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 08 · ประเมินตัวคุณเอง</span>
+    <h1>เครื่องคำนวณขยะ</h1>
+    <p class="lede">ตัวเลขเล็กๆ ที่คุณใช้ทุกวัน เมื่อคูณด้วยหนึ่งสัปดาห์ อาจมากกว่าที่คิด</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">08 คำนวณ</span><div class="line"></div></div>
+      <h2>เครื่องคำนวณขยะของคุณ</h2>
+      <p>กรอกจำนวนที่คุณใช้โดยประมาณต่อวัน แล้วดูว่าถ้าคุณลดการใช้ลงครึ่งหนึ่ง จะช่วยลดขยะได้กี่ชิ้นต่อสัปดาห์</p>
+
+      <div class="panel">
+        <div class="grid cols-3">
+          <div class="field">
+            <label for="bagsInput">วันนี้ใช้ถุงพลาสติกกี่ใบ?</label>
+            <input type="number" id="bagsInput" min="0" value="0">
+          </div>
+          <div class="field">
+            <label for="cupsInput">ใช้แก้วพลาสติกกี่ใบ?</label>
+            <input type="number" id="cupsInput" min="0" value="0">
+          </div>
+          <div class="field">
+            <label for="boxesInput">ใช้กล่องอาหารกี่กล่อง?</label>
+            <input type="number" id="boxesInput" min="0" value="0">
+          </div>
+        </div>
+
+        <div class="result-box">
+          <div class="small">ปริมาณขยะโดยประมาณต่อสัปดาห์ (ที่การใช้งานปัจจุบัน)</div>
+          <div class="big" id="weeklyTotal">0 ชิ้น/สัปดาห์</div>
+          <div class="small mt" style="margin-top:14px;">ถ้าคุณลดการใช้ลงครึ่งหนึ่ง คุณสามารถลดขยะได้ประมาณ</div>
+          <div class="big" id="weeklyReduction" style="color:var(--leaf);">0 ชิ้น/สัปดาห์</div>
+          <button class="btn btn-primary mt" id="claimReduction">รับ Green Point จากการตั้งเป้านี้</button>
+          <p class="feedback" id="calcFeedback"></p>
+        </div>
+      </div>
+      <p class="small mt">*ตัวเลขเป็นการประมาณเพื่อการเรียนรู้ ไม่ใช่ค่าที่วัดจริงจากร้านค้า</p>
+    </section>
+
+    <div class="center mt">
+      <a href="quiz.html" class="btn btn-primary">ไปต่อ: Green Quiz →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const bags = document.getElementById('bagsInput');
+  const cups = document.getElementById('cupsInput');
+  const boxes = document.getElementById('boxesInput');
+  const totalEl = document.getElementById('weeklyTotal');
+  const reduceEl = document.getElementById('weeklyReduction');
+  const fb = document.getElementById('calcFeedback');
+  let lastReduction = 0;
+
+  function recalc(){
+    const daily = (parseInt(bags.value)||0) + (parseInt(cups.value)||0) + (parseInt(boxes.value)||0);
+    const weekly = daily * 7;
+    lastReduction = Math.round(weekly / 2);
+    totalEl.textContent = weekly + ' ชิ้น/สัปดาห์';
+    reduceEl.textContent = lastReduction + ' ชิ้น/สัปดาห์';
+  }
+  [bags,cups,boxes].forEach(el=> el.addEventListener('input', recalc));
+  recalc();
+
+  document.getElementById('claimReduction').addEventListener('click', ()=>{
+    if(lastReduction <= 0){
+      fb.className = 'feedback no';
+      fb.textContent = 'กรอกจำนวนการใช้งานก่อน เพื่อคำนวณเป้าหมายลดขยะของคุณ';
+      return;
+    }
+    if(!Auth.requireLogin(fb)) return;
+    GreenPoints.add(20);
+    fb.className = 'feedback ok';
+    fb.textContent = 'ตั้งเป้าหมายสำเร็จ! ได้รับ 20 Green Point สำหรับความตั้งใจลดขยะของคุณ';
+  });
+})();
+</script>
+</body>
+</html>

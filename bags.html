@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การลดใช้ถุงพลาสติก | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 02 · ลงมือทำ</span>
+    <h1>การลดใช้ถุงพลาสติก</h1>
+    <p class="lede">ถุงพลาสติกใบเดียวที่คุณปฏิเสธวันนี้ อาจหมายถึงหลายร้อยปีที่ธรรมชาติไม่ต้องแบกรับ</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">02 ต้นตอปัญหา</span><div class="line"></div></div>
+      <h2>ปัญหาถุงพลาสติกแบบใช้ครั้งเดียว</h2>
+      <p>ถุงพลาสติกหูหิ้วที่แจกฟรีหน้าเคาน์เตอร์คือขยะที่พบมากที่สุดจากร้านสะดวกซื้อ เพราะแจกง่าย ใช้ฟรี และมักถูกใช้เพียงครั้งเดียวก่อนถูกทิ้ง ทั้งที่ใช้เวลาผลิตจากทรัพยากรปิโตรเลียม และใช้เวลาย่อยสลายในธรรมชาตินานนับร้อยปี การลดถุงพลาสติกจึงเป็นจุดเริ่มต้นที่ง่ายที่สุดจุดหนึ่งในการลดขยะ</p>
+      <div class="grid cols-3 mt">
+        <div class="stat"><span class="num">1 ครั้ง</span><span class="label">อายุการใช้งานเฉลี่ยของถุงพลาสติก 1 ใบ</span></div>
+        <div class="stat"><span class="num">400+</span><span class="label">ปีที่ใช้ย่อยสลายในธรรมชาติ</span></div>
+        <div class="stat"><span class="num">0 บาท</span><span class="label">ต้นทุนที่ลูกค้าจ่าย แต่สิ่งแวดล้อมต้องแบกรับ</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">การรณรงค์</span><div class="line"></div></div>
+      <h2>การรณรงค์ลดการใช้ถุง</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>💬 ถามก่อนแจกทุกครั้ง</h3>
+          <p>พนักงานถามลูกค้าก่อนหยิบถุงเสมอ แทนการหยิบใส่ให้อัตโนมัติ เพื่อให้ลูกค้ามีสิทธิ์เลือก</p>
+        </div>
+        <div class="card">
+          <h3>🏷️ ป้ายรณรงค์ในร้าน</h3>
+          <p>ติดป้ายเชิญชวนบริเวณเคาน์เตอร์ชำระเงิน ให้ลูกค้าตัดสินใจได้ง่ายก่อนถึงจุดจ่ายเงิน</p>
+        </div>
+        <div class="card">
+          <h3>🎁 สะสมแต้มเมื่อปฏิเสธถุง</h3>
+          <p>มอบคะแนนสะสมหรือส่วนลดเล็กน้อยให้ลูกค้าที่นำถุงมาเองหรือปฏิเสธถุงพลาสติก</p>
+        </div>
+        <div class="card">
+          <h3>📅 วันงดแจกถุง</h3>
+          <p>กำหนดวันหรือช่วงเวลารณรงค์งดแจกถุงพลาสติกทุกสาขาพร้อมกัน เพื่อสร้างความคุ้นเคย</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ทางเลือก</span><div class="line"></div></div>
+      <h2>ทางเลือกแทนถุงพลาสติก</h2>
+      <div class="compare">
+        <div class="col old">
+          <h3>ถุงพลาสติกแบบเดิม</h3>
+          <ul>
+            <li>ใช้ครั้งเดียวแล้วทิ้ง</li>
+            <li>ผลิตจากปิโตรเลียม</li>
+            <li>ย่อยสลายยาก ตกค้างนาน</li>
+            <li>แจกฟรีโดยไม่มีเงื่อนไข</li>
+          </ul>
+        </div>
+        <div class="col new">
+          <h3>ทางเลือกที่ยั่งยืนกว่า</h3>
+          <ul>
+            <li>ถุงผ้าหรือกระเป๋าที่ใช้ซ้ำได้หลายครั้ง</li>
+            <li>ตะกร้า/กล่องส่วนตัวสำหรับใส่ของ</li>
+            <li>ถุงกระดาษรีไซเคิลสำหรับของชิ้นเล็ก</li>
+            <li>การถือสินค้าด้วยมือเมื่อซื้อไม่กี่ชิ้น</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ลองเลย</span><div class="line"></div></div>
+      <h2>วันนี้คุณลดถุงไปกี่ใบ?</h2>
+      <div class="panel center" id="bagCounterPanel">
+        <p class="small">กดปุ่มทุกครั้งที่คุณปฏิเสธถุงพลาสติกวันนี้ แล้วกด "บันทึก" เพื่อรับ Green Point</p>
+        <div style="display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0;">
+          <button class="btn btn-outline" id="bagMinus" style="width:52px;height:52px;padding:0;font-size:1.4rem;">−</button>
+          <div>
+            <div class="big" id="bagCount" style="font-family:'Kanit';font-weight:800;font-size:3rem;color:var(--forest);">0</div>
+            <div class="small">ใบที่ลดได้วันนี้</div>
+          </div>
+          <button class="btn btn-primary" id="bagPlus" style="width:52px;height:52px;padding:0;font-size:1.4rem;">+</button>
+        </div>
+        <button class="btn btn-forest" id="bagSave">บันทึกและรับ Green Point</button>
+        <p class="feedback" id="bagFeedback"></p>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="recycle.html" class="btn btn-primary">ไปต่อ: การคัดแยกและรีไซเคิล →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  let count = 0;
+  const countEl = document.getElementById('bagCount');
+  const fb = document.getElementById('bagFeedback');
+  document.getElementById('bagPlus').addEventListener('click', ()=>{ count++; countEl.textContent = count; fb.textContent=''; });
+  document.getElementById('bagMinus').addEventListener('click', ()=>{ count = Math.max(0,count-1); countEl.textContent = count; fb.textContent=''; });
+  document.getElementById('bagSave').addEventListener('click', ()=>{
+    if(count === 0){
+      fb.className = 'feedback no';
+      fb.textContent = 'ลองกด + เมื่อคุณปฏิเสธถุงพลาสติกก่อนบันทึกนะ';
+      return;
+    }
+    if(!Auth.requireLogin(fb)) return;
+    GreenPoints.add(count * 5);
+    fb.className = 'feedback ok';
+    fb.textContent = `เยี่ยมมาก! คุณได้รับ ${count*5} Green Point จากการลดถุง ${count} ใบ`;
+    count = 0;
+    countEl.textContent = 0;
+  });
+})();
+</script>
+</body>
+</html>

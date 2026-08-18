@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เข้าสู่ระบบ | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">บัญชีของฉัน</span>
+    <h1>เข้าสู่ระบบ / สมัครสมาชิก</h1>
+    <p class="lede">สร้างบัญชีเพื่อเก็บ Green Point ของคุณเองจาก Checklist เครื่องคำนวณ เกมคัดแยกขยะ และ Green Quiz</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <section>
+      <div class="auth-wrap">
+        <div class="auth-shell">
+
+          <div class="auth-side">
+            <div class="auth-side-top">
+              <span class="eyebrow">Green Point Member</span>
+              <h2>บัญชีเดียว เก็บทุกความตั้งใจ</h2>
+              <p>ทุกครั้งที่คุณลดถุง แยกขยะ หรือทำ Green Quiz ระบบจะเก็บ Green Point ไว้ในบัญชีของคุณเอง</p>
+              <ul class="auth-perks">
+                <li><span class="ico">🛍️</span> รับแต้มจากการลดใช้ถุงพลาสติก</li>
+                <li><span class="ico">♻️</span> รับแต้มจากเกมคัดแยกขยะ</li>
+                <li><span class="ico">🌱</span> รับแต้มจาก Checklist และ Green Quiz</li>
+              </ul>
+            </div>
+
+            <div class="member-card">
+              <div class="mc-top">
+                <span class="mc-brand"><img src="images/7eleven-logo.png" alt="7-Eleven" class="mark"> GREEN CARD</span>
+                <span class="mc-chip"></span>
+              </div>
+              <div class="mc-num">•••• •••• 2026</div>
+              <div class="mc-bottom">
+                <span class="mc-name">GREEN HERO<span>สมาชิกของคุณ</span></span>
+                <span class="mc-pts"><b data-green-points-card>0</b><span>Green Point</span></span>
+              </div>
+              <div class="mc-stripe"></div>
+            </div>
+          </div>
+
+          <div class="auth-form-side">
+            <div class="auth-tabs" id="authTabs">
+              <button class="auth-tab active" id="tabLogin" type="button">เข้าสู่ระบบ</button>
+              <button class="auth-tab" id="tabRegister" type="button">สมัครสมาชิก</button>
+            </div>
+
+            <form class="auth-form active" id="loginForm">
+              <div class="field">
+                <label for="loginUser">ชื่อผู้ใช้</label>
+                <div class="input-wrap">
+                  <input type="text" id="loginUser" autocomplete="username" >
+                </div>
+              </div>
+              <div class="field">
+                <label for="loginPass">รหัสผ่าน</label>
+                <div class="input-wrap">
+                  <input type="password" id="loginPass" autocomplete="current-password" >
+                  <button type="button" class="toggle-pass" data-target="loginPass">แสดง</button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary auth-submit">เข้าสู่ระบบ</button>
+              <p class="feedback" id="loginFeedback"></p>
+              <div class="auth-links">
+                <button type="button" class="link-btn" id="forgotLink">ลืมรหัสผ่าน?</button>
+              </div>
+            </form>
+
+            <form class="auth-form" id="registerForm">
+              <div class="field">
+                <label for="regUser">ตั้งชื่อผู้ใช้</label>
+                <div class="input-wrap">
+                  <input type="text" id="regUser" autocomplete="username" >
+                </div>
+              </div>
+              <div class="field">
+                <label for="regPass">ตั้งรหัสผ่าน</label>
+                <div class="input-wrap">
+                  <input type="password" id="regPass" autocomplete="new-password">
+                  <button type="button" class="toggle-pass" data-target="regPass">แสดง</button>
+                </div>
+              </div>
+              <div class="field">
+                <label for="regSecQuestion">คำถามกู้คืนรหัสผ่าน</label>
+                <select id="regSecQuestion">
+                  <option value="">— เลือกคำถาม —</option>
+                  <option value="ชื่อสัตว์เลี้ยงตัวแรกของคุณคืออะไร?">ชื่อสัตว์เลี้ยงตัวแรกของคุณคืออะไร?</option>
+                  <option value="โรงเรียนประถมของคุณชื่ออะไร?">โรงเรียนประถมของคุณชื่ออะไร?</option>
+                  <option value="อาหารจานโปรดของคุณคืออะไร?">อาหารจานโปรดของคุณคืออะไร?</option>
+                  <option value="ชื่อเล่นสมัยเด็กของคุณคืออะไร?">ชื่อเล่นสมัยเด็กของคุณคืออะไร?</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="regSecAnswer">คำตอบ</label>
+                <input type="text" id="regSecAnswer" placeholder="คำตอบของคุณ (ใช้ตอนลืมรหัสผ่าน)">
+              </div>
+              <p class="auth-hint">บัญชีนี้ใช้สำหรับเก็บ Green Point บนเบราว์เซอร์นี้เท่านั้น เป็นระบบตัวอย่างเพื่อการเรียนรู้ ไม่ใช่ระบบสมาชิกจริงของ 7‑Eleven</p>
+              <button type="submit" class="btn btn-primary auth-submit">สมัครสมาชิก</button>
+              <p class="feedback" id="registerFeedback"></p>
+            </form>
+
+            <form class="auth-form" id="forgotForm">
+              <p class="auth-hint" style="margin-top:0;">กรอกชื่อผู้ใช้ ตอบคำถามกู้คืนรหัสผ่านที่ตั้งไว้ตอนสมัคร แล้วตั้งรหัสผ่านใหม่ได้ทันที</p>
+
+              <div class="field">
+                <label for="fpUser">ชื่อผู้ใช้</label>
+                <div class="input-wrap">
+                  <input type="text" id="fpUser" autocomplete="username" placeholder="เช่น greenhero01">
+                </div>
+              </div>
+              <button type="button" class="btn btn-outline" id="fpFindBtn" style="width:100%;justify-content:center;">ค้นหาบัญชี</button>
+              <p class="feedback" id="fpFindFeedback"></p>
+
+              <div id="fpStep2" style="display:none;">
+                <div class="field">
+                  <label id="fpQuestionLabel">คำถามกู้คืนรหัสผ่าน</label>
+                  <input type="text" id="fpAnswer" placeholder="คำตอบของคุณ">
+                </div>
+                <div class="field">
+                  <label for="fpNewPass">รหัสผ่านใหม่</label>
+                  <div class="input-wrap">
+                    <input type="password" id="fpNewPass" autocomplete="new-password" placeholder="อย่างน้อย 4 ตัวอักษร">
+                    <button type="button" class="toggle-pass" data-target="fpNewPass">แสดง</button>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary auth-submit">ตั้งรหัสผ่านใหม่</button>
+              </div>
+              <p class="feedback" id="forgotFeedback"></p>
+
+              <div class="auth-links">
+                <button type="button" class="link-btn" id="backToLoginLink">← กลับไปเข้าสู่ระบบ</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const tabLogin = document.getElementById('tabLogin');
+  const tabRegister = document.getElementById('tabRegister');
+  const authTabs = document.getElementById('authTabs');
+  const loginForm = document.getElementById('loginForm');
+  const registerForm = document.getElementById('registerForm');
+  const forgotForm = document.getElementById('forgotForm');
+
+  function showTab(which){
+    const isLogin = which === 'login';
+    const isForgot = which === 'forgot';
+    tabLogin.classList.toggle('active', isLogin);
+    tabRegister.classList.toggle('active', !isLogin && !isForgot);
+    loginForm.classList.toggle('active', isLogin);
+    registerForm.classList.toggle('active', which === 'register');
+    forgotForm.classList.toggle('active', isForgot);
+    authTabs.classList.toggle('on-register', which === 'register');
+    authTabs.style.display = isForgot ? 'none' : '';
+  }
+  tabLogin.addEventListener('click', ()=> showTab('login'));
+  tabRegister.addEventListener('click', ()=> showTab('register'));
+  document.getElementById('forgotLink').addEventListener('click', ()=> showTab('forgot'));
+  document.getElementById('backToLoginLink').addEventListener('click', ()=> showTab('login'));
+
+  // show/hide password
+  document.querySelectorAll('.toggle-pass').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const input = document.getElementById(btn.dataset.target);
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.textContent = show ? 'ซ่อน' : 'แสดง';
+    });
+  });
+
+  // reflect current Green Point total on the member-card mockup
+  const cardPts = document.querySelector('[data-green-points-card]');
+  if(cardPts && typeof GreenPoints !== 'undefined'){
+    cardPts.textContent = GreenPoints.get();
+  }
+
+  loginForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const fb = document.getElementById('loginFeedback');
+    const res = Auth.login(document.getElementById('loginUser').value, document.getElementById('loginPass').value);
+    if(res.ok){
+      fb.className = 'feedback ok';
+      fb.textContent = 'เข้าสู่ระบบสำเร็จ กำลังพาไปหน้าแรก...';
+      Auth.renderHeader();
+      GreenPoints.render();
+      setTimeout(()=> location.href = 'index.html', 700);
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = res.msg;
+    }
+  });
+
+  registerForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const fb = document.getElementById('registerFeedback');
+    const res = Auth.register(
+      document.getElementById('regUser').value,
+      document.getElementById('regPass').value,
+      {
+        secQuestion: document.getElementById('regSecQuestion').value,
+        secAnswer: document.getElementById('regSecAnswer').value
+      }
+    );
+    if(res.ok){
+      fb.className = 'feedback ok';
+      fb.textContent = 'สมัครสมาชิกสำเร็จ กำลังพาไปหน้าแรก...';
+      Auth.renderHeader();
+      GreenPoints.render();
+      setTimeout(()=> location.href = 'index.html', 700);
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = res.msg;
+    }
+  });
+
+  // ---- forgot password flow ----
+  const fpStep2 = document.getElementById('fpStep2');
+  const fpFindFeedback = document.getElementById('fpFindFeedback');
+  const forgotFeedback = document.getElementById('forgotFeedback');
+  let fpUsername = '';
+
+  document.getElementById('fpFindBtn').addEventListener('click', ()=>{
+    const username = document.getElementById('fpUser').value;
+    const res = Auth.getSecurityQuestion(username);
+    forgotFeedback.textContent = '';
+    if(res.ok){
+      fpUsername = username.trim();
+      document.getElementById('fpQuestionLabel').textContent = res.question;
+      fpStep2.style.display = 'block';
+      fpFindFeedback.className = 'feedback ok';
+      fpFindFeedback.textContent = 'พบบัญชีแล้ว กรุณาตอบคำถามด้านล่าง';
+    } else {
+      fpStep2.style.display = 'none';
+      fpFindFeedback.className = 'feedback no';
+      fpFindFeedback.textContent = res.msg;
+    }
+  });
+
+  forgotForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(fpStep2.style.display === 'none') return;
+    const res = Auth.resetPassword(
+      fpUsername,
+      document.getElementById('fpAnswer').value,
+      document.getElementById('fpNewPass').value
+    );
+    if(res.ok){
+      forgotFeedback.className = 'feedback ok';
+      forgotFeedback.textContent = 'ตั้งรหัสผ่านใหม่สำเร็จ! กลับไปเข้าสู่ระบบได้เลย';
+      setTimeout(()=> showTab('login'), 1200);
+    } else {
+      forgotFeedback.className = 'feedback no';
+      forgotFeedback.textContent = res.msg;
+    }
+  });
+
+  // if already logged in, bounce to home
+  if(Auth.currentUser()){
+    location.href = 'index.html';
+  }
+})();
+</script>
+</body>
+</html>

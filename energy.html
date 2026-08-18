@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การประหยัดพลังงานในร้าน | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 05 · ใช้พลังงานอย่างคุ้มค่า</span>
+    <h1>การประหยัดพลังงานในร้าน</h1>
+    <p class="lede">การลดขยะไม่ได้มีแค่สิ่งที่จับต้องได้ พลังงานที่ใช้อย่างสิ้นเปลืองก็คือทรัพยากรที่สูญเสียไปเช่นกัน</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">05 ภาพรวม</span><div class="line"></div></div>
+      <h2>การใช้ไฟฟ้าในร้านสะดวกซื้อ</h2>
+      <p>ร้านสะดวกซื้อเปิดให้บริการตลอด 24 ชั่วโมง ทำให้ใช้ไฟฟ้าต่อเนื่องตลอดวัน ทั้งระบบแสงสว่าง ตู้แช่เย็น เครื่องปรับอากาศ และอุปกรณ์อิเล็กทรอนิกส์ต่างๆ การจัดการพลังงานอย่างมีประสิทธิภาพจึงเป็นอีกหนึ่งแนวทางลดผลกระทบต่อสิ่งแวดล้อมที่มองไม่เห็นเป็น "ขยะ" โดยตรง แต่เกี่ยวข้องกับการปล่อยก๊าซเรือนกระจกจากการผลิตไฟฟ้า</p>
+      <div class="grid cols-3 mt">
+        <div class="stat"><span class="num">24 ชม.</span><span class="label">ระยะเวลาที่ร้านเปิดให้บริการต่อวัน</span></div>
+        <div class="stat"><span class="num">~40%</span><span class="label">สัดส่วนพลังงานโดยประมาณที่ใช้กับระบบความเย็น</span></div>
+        <div class="stat"><span class="num">LED</span><span class="label">เทคโนโลยีหลอดไฟที่ประหยัดพลังงานกว่าหลอดแบบเดิม</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ระบบเย็น</span><div class="line"></div></div>
+      <h2>ระบบทำความเย็น</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>🚪 ตู้แช่แบบมีประตูปิด</h3>
+          <p>ตู้แช่เครื่องดื่มและอาหารแบบมีบานประตูกระจก ช่วยรักษาความเย็นภายในได้ดีกว่าตู้เปิดโล่ง ลดการสูญเสียพลังงาน</p>
+        </div>
+        <div class="card">
+          <h3>🌡️ ตั้งอุณหภูมิให้เหมาะสม</h3>
+          <p>ปรับอุณหภูมิตู้แช่และเครื่องปรับอากาศให้อยู่ในระดับที่พอเหมาะ ไม่เย็นจัดเกินความจำเป็น</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">แสงสว่าง</span><div class="line"></div></div>
+      <h2>หลอดไฟประหยัดพลังงาน</h2>
+      <p>การเปลี่ยนจากหลอดไฟแบบเดิมมาเป็นหลอด LED ช่วยลดการใช้ไฟฟ้าได้อย่างมีนัยสำคัญ เพราะ LED ใช้พลังงานน้อยกว่าในการให้แสงสว่างเท่ากัน และมีอายุการใช้งานยาวนานกว่า ทำให้ลดขยะจากหลอดไฟที่ต้องเปลี่ยนบ่อยไปพร้อมกัน</p>
+      <div class="panel mt">
+        <div class="bar-row"><span class="label">หลอดไส้แบบเดิม</span><div class="track"><div class="fill" style="width:100%;background:var(--red);"></div></div><span class="pct">สูง</span></div>
+        <div class="bar-row"><span class="label">หลอดฟลูออเรสเซนต์</span><div class="track"><div class="fill" style="width:55%;background:var(--orange);"></div></div><span class="pct">ปานกลาง</span></div>
+        <div class="bar-row"><span class="label">หลอด LED</span><div class="track"><div class="fill" style="width:20%;"></div></div><span class="pct">ต่ำ</span></div>
+        <p class="small mt" style="margin-bottom:0;">แถบแสดงระดับการใช้พลังงานโดยเปรียบเทียบ ยิ่งแถบสั้น ยิ่งประหยัดไฟมากขึ้น</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">แนวคิด</span><div class="line"></div></div>
+      <h2>แนวคิดร้านค้าเพื่อสิ่งแวดล้อม</h2>
+      <div class="grid cols-3">
+        <div class="card"><span class="icon">☀️</span><h3>พลังงานแสงอาทิตย์</h3><p>ติดตั้งแผงโซลาร์เซลล์บนหลังคาร้านเพื่อผลิตไฟฟ้าใช้เองบางส่วน</p></div>
+        <div class="card"><span class="icon">📊</span><h3>ระบบตรวจวัดพลังงาน</h3><p>ติดตามการใช้ไฟฟ้าแบบเรียลไทม์ เพื่อหาจุดที่ใช้พลังงานเกินความจำเป็น</p></div>
+        <div class="card"><span class="icon">🏗️</span><h3>ออกแบบร้านให้ระบายอากาศดี</h3><p>ลดภาระของเครื่องปรับอากาศด้วยการออกแบบสถาปัตยกรรมที่เหมาะกับสภาพอากาศ</p></div>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="technology.html" class="btn btn-primary">ไปต่อ: เทคโนโลยีกับการลดขยะ →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

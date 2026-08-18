@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เทคโนโลยีกับการลดขยะ | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 06 · นวัตกรรม</span>
+    <h1>เทคโนโลยีกับการลดขยะ</h1>
+    <p class="lede">เทคโนโลยีที่มองไม่เห็น อย่างระบบข้อมูลและดิจิทัล ก็ช่วยลดขยะได้พอๆ กับสิ่งที่จับต้องได้</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">06 ดิจิทัล</span><div class="line"></div></div>
+      <h2>ระบบดิจิทัลช่วยลดการใช้กระดาษ</h2>
+      <p>ใบเสร็จกระดาษเป็นขยะที่ถูกมองข้าม เพราะมักเคลือบสารเคมีที่ทำให้รีไซเคิลยาก การนำเทคโนโลยีดิจิทัลมาแทนที่กระดาษ เช่น e-Receipt หรือใบเสร็จผ่านแอปพลิเคชัน ช่วยลดปริมาณกระดาษที่ต้องพิมพ์และทิ้งในแต่ละวันได้อย่างมาก</p>
+      <div class="grid cols-2 mt">
+        <div class="card"><span class="icon">🧾</span><h3>ใบเสร็จอิเล็กทรอนิกส์</h3><p>ส่งใบเสร็จผ่าน SMS อีเมล หรือแอปพลิเคชัน แทนการพิมพ์กระดาษทุกครั้ง</p></div>
+        <div class="card"><span class="icon">📱</span><h3>คูปอง/โปรโมชันบนแอป</h3><p>เปลี่ยนใบปลิวและคูปองกระดาษให้อยู่ในรูปแบบดิจิทัลบนสมาร์ตโฟน</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">จัดการสินค้า</span><div class="line"></div></div>
+      <h2>ระบบจัดการสินค้า</h2>
+      <p>ระบบบริหารสต๊อกสินค้าที่แม่นยำช่วยให้ร้านสั่งสินค้าในปริมาณที่เหมาะสม ลดการสั่งเกินความต้องการ ซึ่งเป็นสาเหตุหลักของอาหารและสินค้าหมดอายุที่ต้องทิ้งเป็นขยะโดยไม่จำเป็น</p>
+      <div class="grid cols-3 mt">
+        <div class="card"><span class="icon">📦</span><h3>ติดตามสต๊อกแบบเรียลไทม์</h3><p>รู้จำนวนสินค้าคงเหลือที่แม่นยำ ลดการสั่งซื้อเกินความจำเป็น</p></div>
+        <div class="card"><span class="icon">⏰</span><h3>แจ้งเตือนใกล้หมดอายุ</h3><p>ระบบแจ้งเตือนสินค้าที่ใกล้หมดอายุ เพื่อจัดโปรโมชันลดราคาก่อนต้องทิ้ง</p></div>
+        <div class="card"><span class="icon">🔄</span><h3>วางแผนการสั่งซื้อ</h3><p>วิเคราะห์แนวโน้มการขายเพื่อสั่งสินค้าในปริมาณที่สอดคล้องกับความต้องการจริง</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">วิเคราะห์ข้อมูล</span><div class="line"></div></div>
+      <h2>การวิเคราะห์ข้อมูลเพื่อลดของเสีย</h2>
+      <p>ข้อมูลการขายจำนวนมากที่ร้านสะดวกซื้อเก็บรวบรวมทุกวัน สามารถนำมาวิเคราะห์เพื่อหาสาเหตุของของเสีย เช่น สินค้าประเภทใดถูกทิ้งบ่อยที่สุด ช่วงเวลาใดมีของเสียมากที่สุด แล้วนำผลลัพธ์ไปปรับปรุงกระบวนการทำงานให้แม่นยำขึ้น</p>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">Smart Store</span><div class="line"></div></div>
+      <h2>เทคโนโลยี Smart Store</h2>
+      <div class="grid cols-3">
+        <div class="card"><span class="icon">🤖</span><h3>เซ็นเซอร์ตรวจจับ</h3><p>เซ็นเซอร์ในตู้แช่และชั้นวางช่วยตรวจสอบอุณหภูมิและสินค้าคงเหลืออัตโนมัติ</p></div>
+        <div class="card"><span class="icon">💳</span><h3>จุดชำระเงินอัตโนมัติ</h3><p>ลดการพิมพ์เอกสารและกระดาษที่ไม่จำเป็นในกระบวนการชำระเงิน</p></div>
+        <div class="card"><span class="icon">🌐</span><h3>แพลตฟอร์มบริหารความยั่งยืน</h3><p>รวบรวมข้อมูลด้านสิ่งแวดล้อมของทุกสาขาไว้ในที่เดียว เพื่อวางแผนลดขยะภาพรวม</p></div>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="customer.html" class="btn btn-primary">ไปต่อ: ลูกค้าช่วยลดขยะได้อย่างไร →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

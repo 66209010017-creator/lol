@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>บรรจุภัณฑ์รักษ์โลก | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 04 · ออกแบบใหม่</span>
+    <h1>บรรจุภัณฑ์รักษ์โลก</h1>
+    <p class="lede">บรรจุภัณฑ์ที่ดีไม่ใช่แค่ห่อหุ้มสินค้า แต่ต้องคิดไปถึงวันที่มันกลายเป็นขยะด้วย</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">04 นิยาม</span><div class="line"></div></div>
+      <h2>บรรจุภัณฑ์คืออะไร</h2>
+      <p>บรรจุภัณฑ์ คือวัสดุที่ห่อหุ้ม ปกป้อง และช่วยขนส่งสินค้าให้ถึงมือลูกค้าอย่างปลอดภัย ตั้งแต่ซองขนม ขวดเครื่องดื่ม ไปจนถึงกล่องอาหารพร้อมทาน แม้บรรจุภัณฑ์จะจำเป็นต่อการรักษาคุณภาพสินค้า แต่การออกแบบที่ใช้วัสดุเกินความจำเป็นก็สร้างขยะเพิ่มขึ้นโดยไม่จำเป็นเช่นกัน</p>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ลดวัสดุ</span><div class="line"></div></div>
+      <h2>การลดวัสดุที่ไม่จำเป็น</h2>
+      <div class="grid cols-3">
+        <div class="card"><span class="icon">📉</span><h3>ลดชั้นบรรจุภัณฑ์</h3><p>ลดจำนวนชั้นห่อหุ้มที่ซ้ำซ้อน เช่น ห่อพลาสติกซ้อนกล่องกระดาษที่ไม่จำเป็น</p></div>
+        <div class="card"><span class="icon">🪶</span><h3>ทำให้บางและเบาลง</h3><p>ออกแบบบรรจุภัณฑ์ให้ใช้วัสดุน้อยลงโดยยังคงความแข็งแรงเพียงพอต่อการใช้งาน</p></div>
+        <div class="card"><span class="icon">🚫</span><h3>ตัดส่วนเกิน</h3><p>ยกเลิกส่วนตกแต่งที่ไม่จำเป็น เช่น ฝาซ้อน ช้อนส้อมพลาสติกที่ลูกค้าไม่ได้ขอ</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">เลือกวัสดุ</span><div class="line"></div></div>
+      <h2>การเลือกวัสดุที่นำกลับมาใช้ใหม่ได้</h2>
+      <div class="panel">
+        <div class="bar-row"><span class="label">PET / พลาสติกใส</span><div class="track"><div class="fill" style="width:88%;"></div></div><span class="pct">รีไซเคิลง่าย</span></div>
+        <div class="bar-row"><span class="label">กระดาษคราฟท์</span><div class="track"><div class="fill" style="width:80%;background:var(--orange);"></div></div><span class="pct">รีไซเคิลง่าย</span></div>
+        <div class="bar-row"><span class="label">อลูมิเนียม</span><div class="track"><div class="fill" style="width:92%;background:var(--forest);"></div></div><span class="pct">รีไซเคิลง่าย</span></div>
+        <div class="bar-row"><span class="label">พลาสติกเคลือบฟอยล์</span><div class="track"><div class="fill" style="width:15%;background:var(--red);"></div></div><span class="pct">รีไซเคิลยาก</span></div>
+        <p class="small mt" style="margin-bottom:0;">การเลือกวัสดุตั้งแต่ขั้นออกแบบ ส่งผลโดยตรงว่าบรรจุภัณฑ์นั้นจะจบชีวิตในถังรีไซเคิลหรือหลุมฝังกลบ</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">เปรียบเทียบ</span><div class="line"></div></div>
+      <h2>บรรจุภัณฑ์แบบเดิม เทียบกับ แบบรักษ์โลก</h2>
+      <div class="compare">
+        <div class="col old">
+          <h3>แบบเดิม</h3>
+          <ul>
+            <li>พลาสติกหลายชั้นผสมกัน แยกยาก</li>
+            <li>ฝา ช้อนส้อม แถมมาโดยอัตโนมัติ</li>
+            <li>สีสันเข้มและหมึกพิมพ์เต็มพื้นผิว</li>
+            <li>ออกแบบเพื่อความสวยงามเป็นหลัก</li>
+          </ul>
+        </div>
+        <div class="col new">
+          <h3>แบบรักษ์โลก</h3>
+          <ul>
+            <li>วัสดุชนิดเดียว (mono-material) แยกง่าย</li>
+            <li>ให้ช้อนส้อมเฉพาะเมื่อลูกค้าขอ</li>
+            <li>ลดพื้นที่พิมพ์ ใช้หมึกที่เป็นมิตรกับสิ่งแวดล้อม</li>
+            <li>ออกแบบให้ใช้ซ้ำหรือรีไซเคิลได้ตั้งแต่ต้น</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="energy.html" class="btn btn-primary">ไปต่อ: การประหยัดพลังงานในร้าน →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

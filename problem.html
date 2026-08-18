@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ปัญหาขยะในปัจจุบัน | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 01 · ทำความเข้าใจปัญหา</span>
+    <h1>ปัญหาขยะในปัจจุบัน</h1>
+    <p class="lede">ก่อนจะลดขยะได้ ต้องรู้ก่อนว่าขยะจากร้านสะดวกซื้อมาจากไหน และส่งผลต่อสิ่งแวดล้อมอย่างไรบ้าง</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">01 ทำความรู้จัก</span><div class="line"></div></div>
+      <h2>ขยะพลาสติกคืออะไร</h2>
+      <p>ขยะพลาสติก คือของเสียที่ทำจากพอลิเมอร์สังเคราะห์ ซึ่งอยู่รอบตัวเราในชีวิตประจำวัน ตั้งแต่ถุง แก้ว หลอด ไปจนถึงบรรจุภัณฑ์อาหาร จุดเด่นของพลาสติกคือราคาถูก ทนทาน และขึ้นรูปได้ง่าย แต่จุดอ่อนใหญ่ที่สุดคือ "ย่อยสลายเองตามธรรมชาติได้ยากมาก" พลาสติกส่วนใหญ่จึงตกค้างอยู่ในสิ่งแวดล้อมเป็นเวลานานหลายสิบถึงหลายร้อยปี</p>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">สำรวจร้าน</span><div class="line"></div></div>
+      <h2>ขยะจากร้านสะดวกซื้อมีอะไรบ้าง</h2>
+      <div class="grid cols-4">
+        <div class="card"><span class="icon">🛍️</span><h3>ถุงพลาสติก</h3><p>ใช้ใส่สินค้าที่ลูกค้าซื้อ ส่วนใหญ่ใช้เพียงครั้งเดียว</p></div>
+        <div class="card"><span class="icon">🥤</span><h3>แก้ว/หลอดพลาสติก</h3><p>จากเครื่องดื่มและน้ำแข็งของร้าน ปนเปื้อนของเหลวจึงรีไซเคิลยาก</p></div>
+        <div class="card"><span class="icon">🍱</span><h3>กล่อง/ถ้วยอาหาร</h3><p>บรรจุภัณฑ์อาหารพร้อมทาน มักมีคราบอาหารติดอยู่</p></div>
+        <div class="card"><span class="icon">🧾</span><h3>ใบเสร็จ/กระดาษ</h3><p>กระดาษความร้อนที่พิมพ์แล้วทิ้ง เคลือบสารที่รีไซเคิลยาก</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">อินโฟกราฟิก</span><div class="line"></div></div>
+      <h2>สัดส่วนขยะโดยประมาณจากร้านสะดวกซื้อ</h2>
+      <div class="panel">
+        <div class="bar-row"><span class="label">ถุงพลาสติก</span><div class="track"><div class="fill" style="width:38%;background:var(--orange);"></div></div><span class="pct">38%</span></div>
+        <div class="bar-row"><span class="label">แก้ว/หลอด</span><div class="track"><div class="fill" style="width:24%;"></div></div><span class="pct">24%</span></div>
+        <div class="bar-row"><span class="label">กล่องอาหาร</span><div class="track"><div class="fill" style="width:21%;background:var(--red);"></div></div><span class="pct">21%</span></div>
+        <div class="bar-row"><span class="label">กระดาษ/อื่นๆ</span><div class="track"><div class="fill" style="width:17%;background:var(--forest);"></div></div><span class="pct">17%</span></div>
+        <p class="small mt" style="margin-bottom:0;">*ตัวเลขเป็นการประมาณเพื่อการเรียนรู้ ไม่ใช่ข้อมูลสถิติทางการของบริษัท</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">ผลกระทบ</span><div class="line"></div></div>
+      <h2>ผลกระทบต่อดิน น้ำ และทะเล</h2>
+      <div class="grid cols-3">
+        <div class="card"><span class="icon">🪨</span><h3>ดิน</h3><p>ขยะฝังกลบปล่อยสารเคมีปนเปื้อนดิน ทำให้พื้นที่เพาะปลูกเสื่อมคุณภาพและใช้เวลาฟื้นฟูนาน</p></div>
+        <div class="card"><span class="icon">💧</span><h3>น้ำ</h3><p>ขยะที่ไม่ได้จัดการอย่างถูกวิธีไหลลงคูคลอง อุดตันทางระบายน้ำ และปนเปื้อนแหล่งน้ำดื่ม</p></div>
+        <div class="card"><span class="icon">🐢</span><h3>ทะเล</h3><p>พลาสติกในทะเลแตกตัวเป็นไมโครพลาสติก ถูกสัตว์ทะเลกินเข้าไปและส่งผลต่อห่วงโซ่อาหาร</p></div>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="bags.html" class="btn btn-primary">ไปต่อ: การลดใช้ถุงพลาสติก →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

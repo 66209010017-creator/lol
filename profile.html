@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>โปรไฟล์ของฉัน | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">บัญชีของฉัน</span>
+    <h1>โปรไฟล์ของฉัน</h1>
+    <p class="lede">แก้ไขข้อมูลส่วนตัว เปลี่ยนรหัสผ่าน หรืออัปเดตคำถามกู้คืนรหัสผ่านของคุณได้ที่นี่</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="profile-head">
+        <div class="profile-avatar" id="profileAvatar">?</div>
+        <div class="who">
+          <div class="uname-lg" id="profileDisplayName">—</div>
+          <div class="handle" id="profileHandle">@—</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="profile-grid">
+
+        <div class="panel">
+          <div class="panel-title">ข้อมูลโปรไฟล์</div>
+          <div class="panel-sub">ชื่อที่แสดงจะปรากฏบนหัวเว็บไซต์แทนชื่อผู้ใช้ของคุณ</div>
+          <form id="profileForm">
+            <div class="field">
+              <label>ชื่อผู้ใช้</label>
+              <div class="field-locked" id="profileUsernameLocked">—</div>
+              <span class="hint-sm">ชื่อผู้ใช้ใช้สำหรับเข้าสู่ระบบ ไม่สามารถเปลี่ยนได้</span>
+            </div>
+            <div class="field">
+              <label for="profileDisplayInput">ชื่อที่แสดง</label>
+              <input type="text" id="profileDisplayInput" placeholder="ชื่อที่อยากให้แสดงบนเว็บไซต์">
+            </div>
+            <div class="field">
+              <label for="profileEmailInput">อีเมล (ไม่บังคับ)</label>
+              <input type="email" id="profileEmailInput" placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="profileBioInput">เกี่ยวกับฉัน (ไม่บังคับ)</label>
+              <textarea id="profileBioInput" placeholder="แนะนำตัวเองสั้นๆ"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">บันทึกการเปลี่ยนแปลง</button>
+            <p class="feedback" id="profileFeedback"></p>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">เปลี่ยนรหัสผ่าน</div>
+          <div class="panel-sub">ใช้รหัสผ่านเดิมยืนยันตัวตนก่อนตั้งรหัสผ่านใหม่</div>
+          <form id="passwordForm">
+            <div class="field">
+              <label for="oldPassInput">รหัสผ่านเดิม</label>
+              <input type="password" id="oldPassInput" autocomplete="current-password" placeholder="อย่างน้อย 4 ตัวอักษร">
+            </div>
+            <div class="field">
+              <label for="newPassInput">รหัสผ่านใหม่</label>
+              <input type="password" id="newPassInput" autocomplete="new-password" placeholder="อย่างน้อย 4 ตัวอักษร">
+            </div>
+            <div class="field">
+              <label for="confirmPassInput">ยืนยันรหัสผ่านใหม่</label>
+              <input type="password" id="confirmPassInput" autocomplete="new-password" placeholder="พิมพ์รหัสผ่านใหม่อีกครั้ง">
+            </div>
+            <button type="submit" class="btn btn-forest">เปลี่ยนรหัสผ่าน</button>
+            <p class="feedback" id="passwordFeedback"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="panel-title">คำถามกู้คืนรหัสผ่าน</div>
+        <div class="panel-sub">ใช้ตอนกด "ลืมรหัสผ่าน?" หน้าเข้าสู่ระบบ ควรตั้งคำตอบที่คุณจำได้แน่นอน</div>
+        <form id="securityForm">
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="secQuestionInput">คำถามกู้คืนรหัสผ่าน</label>
+              <select id="secQuestionInput">
+                <option value="">— เลือกคำถาม —</option>
+                <option value="ชื่อสัตว์เลี้ยงตัวแรกของคุณคืออะไร?">ชื่อสัตว์เลี้ยงตัวแรกของคุณคืออะไร?</option>
+                <option value="โรงเรียนประถมของคุณชื่ออะไร?">โรงเรียนประถมของคุณชื่ออะไร?</option>
+                <option value="อาหารจานโปรดของคุณคืออะไร?">อาหารจานโปรดของคุณคืออะไร?</option>
+                <option value="ชื่อเล่นสมัยเด็กของคุณคืออะไร?">ชื่อเล่นสมัยเด็กของคุณคืออะไร?</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="secAnswerInput">คำตอบ</label>
+              <input type="text" id="secAnswerInput" placeholder="คำตอบของคุณ">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline">บันทึกคำถามกู้คืนรหัสผ่าน</button>
+          <p class="feedback" id="securityFeedback"></p>
+        </form>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="index.html" class="btn btn-outline">← กลับหน้าแรก</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const username = Auth.currentUser();
+  if(!username) return; // gate script above already redirects
+
+  function loadProfile(){
+    const profile = Auth.getProfile(username) || {displayName: username, email:'', bio:'', secQuestion:'', secAnswer:''};
+    document.getElementById('profileAvatar').textContent = (profile.displayName || username).charAt(0).toUpperCase();
+    document.getElementById('profileDisplayName').textContent = profile.displayName || username;
+    document.getElementById('profileHandle').textContent = '@' + username;
+    document.getElementById('profileUsernameLocked').textContent = username;
+    document.getElementById('profileDisplayInput').value = profile.displayName || '';
+    document.getElementById('profileEmailInput').value = profile.email || '';
+    document.getElementById('profileBioInput').value = profile.bio || '';
+    document.getElementById('secQuestionInput').value = profile.secQuestion || '';
+    // don't prefill the answer field — it's stored lowercase/trimmed and shouldn't be shown back as-is
+  }
+  loadProfile();
+
+  document.getElementById('profileForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const fb = document.getElementById('profileFeedback');
+    const res = Auth.updateProfile(username, {
+      displayName: document.getElementById('profileDisplayInput').value,
+      email: document.getElementById('profileEmailInput').value,
+      bio: document.getElementById('profileBioInput').value
+    });
+    if(res.ok){
+      fb.className = 'feedback ok';
+      fb.textContent = 'บันทึกข้อมูลโปรไฟล์เรียบร้อยแล้ว';
+      loadProfile();
+      Auth.renderHeader();
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = res.msg;
+    }
+  });
+
+  document.getElementById('passwordForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const fb = document.getElementById('passwordFeedback');
+    const oldPass = document.getElementById('oldPassInput').value;
+    const newPass = document.getElementById('newPassInput').value;
+    const confirmPass = document.getElementById('confirmPassInput').value;
+    if(newPass !== confirmPass){
+      fb.className = 'feedback no';
+      fb.textContent = 'รหัสผ่านใหม่ทั้งสองช่องไม่ตรงกัน';
+      return;
+    }
+    const res = Auth.changePassword(username, oldPass, newPass);
+    if(res.ok){
+      fb.className = 'feedback ok';
+      fb.textContent = 'เปลี่ยนรหัสผ่านสำเร็จแล้ว';
+      document.getElementById('passwordForm').reset();
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = res.msg;
+    }
+  });
+
+  document.getElementById('securityForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const fb = document.getElementById('securityFeedback');
+    const res = Auth.updateSecurity(
+      username,
+      document.getElementById('secQuestionInput').value,
+      document.getElementById('secAnswerInput').value
+    );
+    if(res.ok){
+      fb.className = 'feedback ok';
+      fb.textContent = 'บันทึกคำถามกู้คืนรหัสผ่านเรียบร้อยแล้ว';
+      document.getElementById('secAnswerInput').value = '';
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = res.msg;
+    }
+  });
+})();
+</script>
+</body>
+</html>

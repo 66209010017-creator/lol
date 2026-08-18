@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Quiz | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 09 · ทดสอบตัวเอง</span>
+    <h1>Green Quiz</h1>
+    <p class="lede">ทำแบบทดสอบ 10 ข้อ เพื่อดูว่าคุณพร้อมเป็น Green Hero แค่ไหน</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">09 ทดสอบความรู้</span><div class="line"></div></div>
+      <h2>Green Quiz — 10 ข้อ เกี่ยวกับ 7‑Eleven และการลดขยะ</h2>
+      <p class="small">ตอบให้ครบทุกข้อ แล้วดูว่าคุณเป็น Green Hero ระดับไหน</p>
+
+      <div class="quiz-card" id="quizCard">
+        <div id="quizPlay">
+          <div class="quiz-progress" id="quizProgress">ข้อ 1 / 10</div>
+          <div class="quiz-track"><div class="fill" id="quizFill"></div></div>
+          <div class="quiz-q" id="quizQ"></div>
+          <div class="quiz-opts" id="quizOpts"></div>
+          <div class="quiz-explain" id="quizExplain"></div>
+          <div class="center mt">
+            <button class="btn btn-forest" id="quizNext" style="display:none;">ข้อถัดไป →</button>
+          </div>
+        </div>
+
+        <div id="quizResult" class="quiz-result" style="display:none;">
+          <div class="badge-big" id="resultBadge">🌱</div>
+          <div class="small" id="resultTitle">ผลคะแนนของคุณ</div>
+          <div class="score" id="resultScore">0/10</div>
+          <p id="resultText"></p>
+          <button class="btn btn-primary" id="quizRestart">ทำแบบทดสอบอีกครั้ง</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="index.html" class="btn btn-outline">← กลับหน้าแรก</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const Q = [
+    {q:'ขยะพลาสติกใช้เวลาย่อยสลายในธรรมชาติโดยประมาณกี่ปี?', opts:['1-2 ปี','10-20 ปี','400 ปีขึ้นไป','ย่อยสลายไม่ได้เลย'], correct:2, explain:'พลาสติกส่วนใหญ่ใช้เวลาย่อยสลายตามธรรมชาตินานหลายร้อยปี จึงควรลดการใช้ตั้งแต่ต้นทาง'},
+    {q:'ขยะประเภทใดควรทิ้งลงถัง "อินทรีย์"?', opts:['ขวดพลาสติก PET','เศษอาหารและเปลือกผลไม้','กระป๋องอลูมิเนียม','ถุงพลาสติกเคลือบฟอยล์'], correct:1, explain:'เศษอาหารและเปลือกผลไม้ย่อยสลายได้ตามธรรมชาติ จึงจัดเป็นขยะอินทรีย์'},
+    {q:'ข้อใดต่อไปนี้เป็นขยะรีไซเคิล?', opts:['ทิชชู่เปื้อนอาหาร','กระป๋องอลูมิเนียมที่ล้างแล้ว','ห่อลูกอมเคลือบฟอยล์','เศษข้าว'], correct:1, explain:'กระป๋องอลูมิเนียมเป็นวัสดุที่นำกลับมารีไซเคิลได้ดี โดยเฉพาะเมื่อล้างสะอาดก่อนทิ้ง'},
+    {q:'ทางเลือกใดช่วยลดการใช้ถุงพลาสติกได้ดีที่สุด?', opts:['ขอถุงเพิ่มเผื่อไว้','ใช้ถุงผ้าหรือภาชนะส่วนตัว','ใช้ถุงพลาสติก 2 ชั้น','ทิ้งถุงทันทีหลังใช้'], correct:1, explain:'ถุงผ้าและภาชนะส่วนตัวใช้ซ้ำได้หลายครั้ง จึงช่วยลดขยะได้มากกว่าถุงพลาสติกแบบใช้ครั้งเดียว'},
+    {q:'เทคโนโลยีใดช่วยลดการใช้กระดาษใบเสร็จ?', opts:['เครื่องพิมพ์ความร้อน','e-Receipt หรือใบเสร็จอิเล็กทรอนิกส์','เครื่องนับเงินสด','ป้ายราคากระดาษ'], correct:1, explain:'ใบเสร็จอิเล็กทรอนิกส์ส่งผ่านมือถือหรืออีเมล ช่วยลดปริมาณกระดาษที่ต้องพิมพ์และทิ้ง'},
+    {q:'หลอดไฟประเภทใดประหยัดพลังงานมากที่สุด?', opts:['หลอดไส้','หลอดฟลูออเรสเซนต์','หลอด LED','หลอดฮาโลเจน'], correct:2, explain:'หลอด LED ใช้พลังงานน้อยกว่าหลอดชนิดอื่นในการให้แสงสว่างระดับเดียวกัน และมีอายุการใช้งานยาวนานกว่า'},
+    {q:'ก่อนทิ้งขวดพลาสติกลงถังรีไซเคิล ควรทำอะไรก่อน?', opts:['พันเทปให้แน่น','ล้างและเทของเหลวออกให้หมด','ทาสีขวดใหม่','ไม่ต้องทำอะไรเลย'], correct:1, explain:'การล้างและเทของเหลวออกก่อน ช่วยป้องกันการปนเปื้อนวัสดุรีไซเคิลอื่นๆ ในถังเดียวกัน'},
+    {q:'ขยะประเภทใดจากร้านสะดวกซื้อที่มักรีไซเคิลยาก เพราะมีคราบอาหารติด?', opts:['กระป๋องอลูมิเนียม','กล่อง/ถ้วยอาหาร','ขวดแก้ว','กระดาษออฟฟิศ'], correct:1, explain:'กล่องและถ้วยอาหารมักมีคราบอาหารหรือน้ำมันติดอยู่ ทำให้ปนเปื้อนและรีไซเคิลได้ยากกว่าวัสดุที่สะอาด'},
+    {q:'ข้อใดช่วยลดของเสียจากสินค้าที่ใกล้หมดอายุได้ดีที่สุด?', opts:['สั่งสินค้ามาสต๊อกไว้เยอะๆ','ระบบแจ้งเตือนสินค้าใกล้หมดอายุและจัดโปรโมชัน','ไม่ตรวจสอบวันหมดอายุ','เก็บสินค้าไว้หลังร้านตลอดไป'], correct:1, explain:'ระบบแจ้งเตือนช่วยให้ร้านนำสินค้าใกล้หมดอายุมาลดราคาหรือจัดการก่อนที่จะกลายเป็นขยะ'},
+    {q:'การกระทำใดของลูกค้าช่วยลดขยะได้มากที่สุดในแต่ละครั้งที่ซื้อของ?', opts:['ขอถุงพลาสติกทุกครั้งเผื่อไว้ใช้','ปฏิเสธถุงพลาสติกเมื่อไม่จำเป็นและแยกขยะก่อนทิ้ง','ซื้อของให้ได้เยอะที่สุด','ทิ้งขยะทุกชนิดรวมกันถังเดียว'], correct:1, explain:'การปฏิเสธถุงเมื่อไม่จำเป็นและแยกขยะก่อนทิ้ง คือสิ่งที่ลูกค้าทุกคนทำได้ทันทีในทุกการซื้อของ'}
+  ];
+
+  let idx = 0, score = 0, answered = false;
+  const progressEl = document.getElementById('quizProgress');
+  const fillEl = document.getElementById('quizFill');
+  const qEl = document.getElementById('quizQ');
+  const optsEl = document.getElementById('quizOpts');
+  const explainEl = document.getElementById('quizExplain');
+  const nextBtn = document.getElementById('quizNext');
+
+  function render(){
+    answered = false;
+    const item = Q[idx];
+    progressEl.textContent = `ข้อ ${idx+1} / ${Q.length}`;
+    fillEl.style.width = ((idx)/Q.length*100) + '%';
+    qEl.textContent = item.q;
+    explainEl.style.display = 'none';
+    nextBtn.style.display = 'none';
+    optsEl.innerHTML = '';
+    item.opts.forEach((opt, i)=>{
+      const b = document.createElement('button');
+      b.className = 'quiz-opt';
+      b.textContent = opt;
+      b.addEventListener('click', ()=> selectAnswer(i));
+      optsEl.appendChild(b);
+    });
+  }
+
+  function selectAnswer(i){
+    if(answered) return;
+    answered = true;
+    const item = Q[idx];
+    const btns = optsEl.querySelectorAll('.quiz-opt');
+    btns.forEach((b,bi)=>{
+      b.disabled = true;
+      if(bi === item.correct) b.classList.add('correct');
+      else if(bi === i) b.classList.add('wrong');
+    });
+    if(i === item.correct) score++;
+    explainEl.textContent = item.explain;
+    explainEl.style.display = 'block';
+    nextBtn.style.display = 'inline-flex';
+    nextBtn.textContent = (idx === Q.length-1) ? 'ดูผลคะแนน →' : 'ข้อถัดไป →';
+  }
+
+  nextBtn.addEventListener('click', ()=>{
+    idx++;
+    if(idx >= Q.length){ showResult(); }
+    else render();
+  });
+
+  function showResult(){
+    document.getElementById('quizPlay').style.display = 'none';
+    const resultEl = document.getElementById('quizResult');
+    resultEl.style.display = 'block';
+    document.getElementById('resultScore').textContent = `${score}/${Q.length}`;
+    let badge, title, text;
+    if(score >= 8){ badge='🌳'; title='คุณคือ Green Hero!'; text='ความรู้เรื่องการลดขยะของคุณยอดเยี่ยมมาก พร้อมเป็นต้นแบบให้คนรอบข้างแล้ว'; }
+    else if(score >= 5){ badge='🌿'; title='คุณคือ Green Supporter'; text='คุณเข้าใจแนวทางลดขยะได้ดี ลองทบทวนอีกนิดเพื่อเป็น Green Hero เต็มตัว'; }
+    else { badge='🌱'; title='คุณคือ Green Beginner'; text='เริ่มต้นได้ดีแล้ว ลองย้อนกลับไปอ่านแต่ละหน้าอีกครั้งแล้วมาทำแบบทดสอบใหม่'; }
+    document.getElementById('resultBadge').textContent = badge;
+    document.getElementById('resultTitle').textContent = title;
+    if(Auth.currentUser()){
+      document.getElementById('resultText').textContent = text;
+      GreenPoints.add(score * 5);
+    } else {
+      document.getElementById('resultText').innerHTML = text + ' <a href="login.html">เข้าสู่ระบบ</a> ครั้งหน้าเพื่อเก็บ Green Point จากแบบทดสอบนี้ไว้ในบัญชีของคุณ';
+    }
+  }
+
+  document.getElementById('quizRestart').addEventListener('click', ()=>{
+    idx = 0; score = 0;
+    document.getElementById('quizPlay').style.display = 'block';
+    document.getElementById('quizResult').style.display = 'none';
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

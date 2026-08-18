@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<script>
+  // gate: must be logged in to view this page
+  if(!localStorage.getItem('seven_green_session')){
+    location.href = 'login.html';
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>การคัดแยกและรีไซเคิล | 7-Eleven Green Life</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tri-stripe"></div>
+
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img src="images/7eleven-logo.png" alt="7-Eleven" class="mark">
+        <span class="name">7‑Eleven <span>Green Life</span></span>
+      </a>
+      <div class="topbar-right">
+        <div class="green-point"><span class="dot"></span><span data-green-points>0 Green Point</span></div>
+        <div class="auth-area" id="authArea"></div>
+      </div>
+    </div>
+  </div>
+  <nav class="aisle-nav">
+    <div class="wrap">
+      <a href="index.html"><span class="num">HOME</span>หน้าแรก</a>
+      <a href="problem.html"><span class="num">01</span>ปัญหาขยะ</a>
+      <a href="bags.html"><span class="num">02</span>ลดถุงพลาสติก</a>
+      <a href="recycle.html"><span class="num">03</span>คัดแยกรีไซเคิล</a>
+      <a href="packaging.html"><span class="num">04</span>บรรจุภัณฑ์</a>
+      <a href="energy.html"><span class="num">05</span>ประหยัดพลังงาน</a>
+      <a href="technology.html"><span class="num">06</span>เทคโนโลยี</a>
+      <a href="customer.html"><span class="num">07</span>Checklist</a>
+      <a href="calculator.html"><span class="num">08</span>คำนวณขยะ</a>
+      <a href="quiz.html"><span class="num">09</span>Green Quiz</a>
+    </div>
+  </nav>
+</header>
+
+<section class="aisle-sign">
+  <div class="wrap">
+    <span class="eyebrow">อาศัย 03 · แยกให้ถูก</span>
+    <h1>การคัดแยกและรีไซเคิล</h1>
+    <p class="lede">ขยะจะกลายเป็นทรัพยากรใหม่ได้ ก็ต่อเมื่อมันถูกแยกให้ถูกประเภทตั้งแต่ต้นทาง</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <section>
+      <div class="shelf-label"><span class="badge">03 หลักการ</span><div class="line"></div></div>
+      <h2>ขยะ 3 ประเภทหลักในร้านสะดวกซื้อ</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <span class="icon">🗑️</span>
+          <h3>ขยะทั่วไป</h3>
+          <p>ขยะที่ไม่สามารถรีไซเคิลหรือย่อยสลายง่าย เช่น ถุงขนมเคลือบฟอยล์ ทิชชู่ที่เปื้อน ห่อพลาสติกรวมวัสดุ</p>
+        </div>
+        <div class="card">
+          <span class="icon">♻️</span>
+          <h3>ขยะรีไซเคิล</h3>
+          <p>วัสดุที่นำกลับมาผลิตใหม่ได้ เช่น ขวดพลาสติก PET กระป๋องอลูมิเนียม กล่องกระดาษที่แห้งสะอาด</p>
+        </div>
+        <div class="card">
+          <span class="icon">🍃</span>
+          <h3>ขยะอินทรีย์</h3>
+          <p>เศษอาหาร เปลือกผลไม้ ของเหลือจากการบริโภคที่ย่อยสลายได้ตามธรรมชาติ นำไปทำปุ๋ยหมักได้</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">วิธีทำ</span><div class="line"></div></div>
+      <h2>วิธีคัดแยกขยะให้ถูกต้อง</h2>
+      <div class="panel">
+        <div class="grid cols-2">
+          <div>
+            <h3>✅ ควรทำ</h3>
+            <p>ล้างและเทของเหลวออกจากขวด/แก้วก่อนทิ้ง แยกฝาออกจากขวดถ้าวัสดุต่างชนิดกัน พับกล่องกระดาษให้แบนเพื่อประหยัดพื้นที่ และสังเกตสีถังขยะก่อนทิ้งทุกครั้ง</p>
+          </div>
+          <div>
+            <h3>🚫 ไม่ควรทำ</h3>
+            <p>อย่าทิ้งเศษอาหารปนกับขยะรีไซเคิล เพราะจะทำให้วัสดุเปื้อนและนำกลับมาใช้ไม่ได้ และอย่าทิ้งขยะอันตราย เช่น แบตเตอรี่ ปนกับขยะทั่วไป</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="shelf-label"><span class="badge">เกม</span><div class="line"></div></div>
+      <h2>เกม: ลากขยะไปลงถังให้ถูกสี</h2>
+      <p class="small">ลากการ์ดขยะแต่ละชิ้น (หรือแตะเลือกแล้วแตะถัง บนมือถือ) ไปวางในถังที่ถูกต้อง เพื่อเก็บ Green Point จากเกมนี้</p>
+
+      <div class="trash-tray" id="trashTray"></div>
+
+      <div class="bins">
+        <div class="bin" data-bin="general"><h4>🗑️ ทั่วไป</h4><div class="drop-zone" data-zone="general"></div></div>
+        <div class="bin" data-bin="recycle"><h4>♻️ รีไซเคิล</h4><div class="drop-zone" data-zone="recycle"></div></div>
+        <div class="bin" data-bin="organic"><h4>🍃 อินทรีย์</h4><div class="drop-zone" data-zone="organic"></div></div>
+      </div>
+      <p class="feedback" id="gameFeedback"></p>
+      <div class="center mt">
+        <button class="btn btn-outline" id="gameReset">เริ่มเกมใหม่</button>
+      </div>
+    </section>
+
+    <div class="center mt">
+      <a href="packaging.html" class="btn btn-primary">ไปต่อ: บรรจุภัณฑ์รักษ์โลก →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="tri-stripe thin"></div>
+  <div class="wrap" style="padding-top:24px;">
+    <div class="fname">7‑Eleven Green Life</div>
+    <div class="small">โครงการเพื่อการเรียนรู้เรื่องการลดขยะและความยั่งยืน • เนื้อหาเพื่อการศึกษา</div>
+  </div>
+</footer>
+<script src="auth.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const ITEMS = [
+    {id:'i1', label:'🧃 กล่องนม', type:'recycle'},
+    {id:'i2', label:'🍌 เปลือกกล้วย', type:'organic'},
+    {id:'i3', label:'🥤 แก้วพลาสติก(ล้างแล้ว)', type:'recycle'},
+    {id:'i4', label:'🧻 ทิชชู่เปื้อน', type:'general'},
+    {id:'i5', label:'🍚 เศษข้าว', type:'organic'},
+    {id:'i6', label:'🥫 กระป๋องอลูมิเนียม', type:'recycle'},
+    {id:'i7', label:'🍬 ห่อลูกอมเคลือบฟอยล์', type:'general'},
+    {id:'i8', label:'🍎 แกนแอปเปิล', type:'organic'},
+  ];
+  let correctCount = 0, totalPlaced = 0;
+  let selectedId = null;
+  const tray = document.getElementById('trashTray');
+  const fb = document.getElementById('gameFeedback');
+
+  function renderTray(){
+    tray.innerHTML = '';
+    ITEMS.forEach(item=>{
+      const el = document.createElement('div');
+      el.className = 'trash-item';
+      el.draggable = true;
+      el.id = item.id;
+      el.dataset.type = item.type;
+      el.textContent = item.label;
+      el.addEventListener('dragstart', e=>{ e.dataTransfer.setData('text/plain', item.id); });
+      el.addEventListener('click', ()=>{
+        document.querySelectorAll('.trash-item').forEach(t=>t.style.outline='none');
+        selectedId = item.id;
+        el.style.outline = '2px solid var(--orange)';
+      });
+      tray.appendChild(el);
+    });
+  }
+  renderTray();
+
+  function handleDrop(binType, itemId){
+    const itemData = ITEMS.find(i=>i.id===itemId);
+    const itemEl = document.getElementById(itemId);
+    if(!itemData || !itemEl) return;
+    totalPlaced++;
+    if(itemData.type === binType){
+      correctCount++;
+      fb.className = 'feedback ok';
+      fb.textContent = `ถูกต้อง! "${itemData.label.trim()}" อยู่ในถัง${binLabel(binType)} (${correctCount}/${ITEMS.length})`;
+      itemEl.remove();
+      if(Auth.currentUser()) GreenPoints.add(3);
+    } else {
+      fb.className = 'feedback no';
+      fb.textContent = `ยังไม่ถูก ลองดูใหม่นะ "${itemData.label.trim()}" ไม่ใช่ขยะ${binLabel(binType)}`;
+    }
+    if(document.querySelectorAll('.trash-item').length === 0){
+      fb.className = 'feedback ok';
+      fb.textContent = `จบเกม! คุณแยกขยะถูกต้อง ${correctCount}/${ITEMS.length} ชิ้น เยี่ยมมาก 🌳`;
+    }
+  }
+  function binLabel(t){ return t==='general'?'ทั่วไป':(t==='recycle'?'รีไซเคิล':'อินทรีย์'); }
+
+  document.querySelectorAll('.bin').forEach(bin=>{
+    bin.addEventListener('dragover', e=>{ e.preventDefault(); bin.classList.add('over'); });
+    bin.addEventListener('dragleave', ()=> bin.classList.remove('over'));
+    bin.addEventListener('drop', e=>{
+      e.preventDefault();
+      bin.classList.remove('over');
+      const id = e.dataTransfer.getData('text/plain');
+      handleDrop(bin.dataset.bin, id);
+    });
+    bin.addEventListener('click', ()=>{
+      if(selectedId){ handleDrop(bin.dataset.bin, selectedId); selectedId = null; }
+    });
+  });
+
+  document.getElementById('gameReset').addEventListener('click', ()=>{
+    correctCount = 0; totalPlaced = 0; fb.textContent=''; renderTray();
+  });
+})();
+</script>
+</body>
+</html>
